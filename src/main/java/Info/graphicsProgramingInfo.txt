@@ -1,0 +1,42 @@
+GPU Graphics notes
+
+much different from cpu
+need to use a low level language in order to do it
+in 80s and 90s had raster graphics
+fixed width and height
+stored in an array of pixels then blit the image
+3d uses a pipeline dont send pixels send shapes
+send a list of vertices
+goes thru vertex shader to turn into normalized coords
+mult by projection now normalied for comp
+3 flags triangle point and strip then go to geometry shader
+rastorization, convert into pixels appropriate for what shading on
+fragment shader colors pixels
+last is test and blending clipping is in shape assembly to tell whats in and outside
+expect array of vertices, can have much attached to them
+gou expects this coded in
+define offsets for each, where it is between th start and end
+can use ebo to specify which points to connect
+fragment shader runs for every pixel at th same time
+can interpolate from red to green
+compilation linking compilation takes to binary
+have to go down and link our programs manually
+global uploads
+
+use reg x looking at complex patterns and doing things with them
+
+can match complex pattern, start with this and end on any text
+can also match full strings
+
+camera uses a matrix
+coords we pass in mult th projection by th position
+creates these normalized device coords tht we can use
+can use this to project them onto th screen
+move the object to be in front of the camera
+uses the RUD vector to determine where th camera is facing
+projection matrix maps it
+want to work with 1920 by 1080 but users is not tht large
+will need to be scaled, make bigger in both directions
+projection matrix -> NDC -> Users Device
+view -> projection -> apos
+mult in th shader, transforms from world to NDC and proj tells us how big th screen is and pos is where we are

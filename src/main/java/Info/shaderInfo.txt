@@ -1,0 +1,45 @@
+vao= vertex array object, contains attrib pointers
+define in our vertex list are accessed through layouts
+corresponds directly to our attrib pointer
+must match th type for the attribs
+can go in anad find it based on what its been told
+camera has a view matrix tht applies to all objects in th scene
+doesnt change from scene to scene
+can upload based on the uniform they stick around object to object
+for each vao all th layouts change but not th unifrorm
+first find th var location in the gpu
+looking for u color, then give th var location
+varColor = ("uColor", shaderID) the program that we look in and the shader id
+glUniformType(variableLocation, uploadValue)
+gpu uses the id that it obtained thru varlocation
+have to be using a shader bc lower call expects tht th shader is being used
+make sure u call and use it first
+we define the vao attributes in an array
+specify the format and want it to be formatted this way
+types match what we pass in
+look for location
+then upload to th shader
+last part is th main func
+glposition = vec4 outputs final position
+have in and out specifier
+they come in from vao and out
+any out in vertex must have an in in vertex
+and fragment has color
+uses graphic pipeline
+fragment works on interpolated data from vertex
+
+//how textuers work
+textures are images
+specify where you want the uv coords to map
+can use the coords to map to the quad you want it to go to
+then maps each of them to each of the vertices, but we have to worry about things
+specify what to do if widths arent equal
+specify if we grow out of the range
+do we want to wrap and repeat it or something else
+when we have a texture we need to store it in an array
+store as rgba, rgba ect for each fucking pixel :D
+then bind th textures we r working on spcifically
+then set parameters, then upload to th gpu and nead to specify the format its coming in
+tell it how much space to reserve and then what type it is
+then we assign uv coords and then a uniform variable and can bind a texture to tell th shader where it is
+bind(texId, slotNum); //shader can ge it out and sample it and then apply it

@@ -1,0 +1,20 @@
+game world has a bunch of sprites
+game world has a bunch of sprites, squares with pics
+at any moment th sprites cld be moving
+cld change the image completely, location, or uvs
+cpu -> tells go to change
+need a way to tell th gpu stuff
+cpu ->go but go -/>gpu
+if any element on th web is changed then only reload that data
+this way you reload minimal data with dirty flags
+sprite is dirty so reload it
+if th pos, color, tex coords, tex id then
+not in th go and not in th components but in th sprite renderer
+all it is already in th sprite renderer
+sets this flag to true when you see if its changed
+if dirty then reload and if any are dirty in th group then rebuffer and send back to th gpu
+it maintains a decoupling of th two
+it implicitly changes and then th render batch sees and loads it
+the harder the dependencies th harder it is to change things
+texid tells us what texture we are sampling
+will have to remove and

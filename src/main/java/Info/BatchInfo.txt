@@ -1,0 +1,21 @@
+simple geometry in games
+can represent game in sprites
+4 verticies and using squares
+draw batches where things are interconnected
+can fit all into one drawing
+quads are all two triangles
+can stuff all verticies in one array and then upload to gpu
+can generate automatically and dont have to worry about them changing
+make sure its in th right order
+if moving then we upload and then go in and change what we need to and re-upload
+creating a render class with add and render
+render batch is where the heavy work is
+creating vao vbo and ebo
+figure out if any change
+generates indices
+want to batch all of the verticies for all objects and then put them all in one array
+then draw all of them at once
+must support at least 16 textures, can have that many bound to gpu before sampling
+then store them in array and then sample the correct texture
+can reserve 0 as a slot to not have a texture to bind
+could include the uv0 and uv1 and id for texture all embedded into the tex coords

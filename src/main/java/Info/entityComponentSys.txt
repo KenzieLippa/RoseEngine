@@ -1,0 +1,30 @@
+oop-object oriented programming
+hirearchies that go from top down with a lot of inheritance
+gets very large very quick and is then less helpful
+came up with component patern
+have a game object with a list of components
+has a transform and a name
+then give a component that can be anything
+this makes th hirearchy wide instead of deep
+dont go more than 3-4 levels deep with hirearchies
+if you attribute things in a scattered way then you can miss stuff with memory jumps
+causes performance issues with cache miss
+so came up with data oriented design
+make up into various groups and put them into arrays
+then have blocks where all components are right next to each other
+memory is then local and u reduce misses
+ids map to components you can look up when you need to
+entity component systems, need to grab diff components hat you are controlling
+then store all in an array close to each other to be local
+bc java we have garbage collection so u cant controll where they go in memory
+we cant do this so instead we do entity component pattern
+communication between game objects
+find out if there is a collider or not
+use a life cycle type thing
+ask if scene is running first
+then create game objects for each in an init method
+add all components
+then start all gameobjects for each component
+all th components have been added so you can get all the component references
+if running then create game object add components and add to scene
+then start tht object

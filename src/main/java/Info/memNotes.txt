@@ -1,0 +1,13 @@
+garbage collected languages cause lag spikes when deleting things
+when say new it creates its own heap further down in memory
+returns the mem space where its located with a reference 0xfood1234
+call accessors on it, go to this mem space and call this method on this object
+if big objects with pics and tex and sounds
+can be big files and so java will return a reference to them, want to hold onto this
+reference is 1 byte
+
+we create a class called asset pool and it will have static hash maps
+string hashing to an object which cld be a tex or a shader ect and make sure they dont die
+make sure java doesnt garbage collect them
+make sure not copying huge amounts of memories when using
+using refrence instead of the object itself

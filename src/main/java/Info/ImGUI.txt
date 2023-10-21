@@ -1,0 +1,10 @@
+standard approach is retained mode
+document mode common for web development
+super common for styling
+set up call backs to see if button is pressed in js
+
+imGUI
+list of elements and rebuilds every frame but not really
+can do all kinds of frames and images and can end it
+immediate mode
+unity is crap but uses IMGUi and so it must be good

@@ -1,0 +1,11 @@
+many ways to alpha blend
+source is original image
+destination is the final color
+alpha is typically blended is 1-sourceAlpha
+final color = dest color * source alpha + new color * 1-color source alpha
+
+color final = (green)* 0.6 + (red) * (1-0.6)
+so would end up as (0,0.6,0) + (0.4, 0, 0) = 0.4, 0.6, 0
+draw everything furthest back first like layers in photoshop
+use a-z index, can use to determine which layer stuff is on
+sort batches by z indexes and then draw them in that order
